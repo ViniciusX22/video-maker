@@ -1,10 +1,15 @@
 const raedline = require("readline-sync");
+const robots = {
+  text: require("./robots/text")
+};
 
-function start() {
+async function start() {
   const content = {};
 
   content.searchTerm = askAndReturnSearchTerm();
   content.prefix = askAndReturnPrefix();
+
+  await robots.text(content);
 
   function askAndReturnSearchTerm() {
     return raedline.question("Type a Wikipedia search term: ");
