@@ -1,9 +1,9 @@
-const raedline = require("readline-sync");
+const readline = require("readline-sync");
 const state = require("./state");
 
 function robot() {
   const content = {
-    maximumSentences: 7
+    maximumSentences: 7,
   };
 
   content.searchTerm = askAndReturnSearchTerm();
@@ -11,12 +11,12 @@ function robot() {
   state.save(content);
 
   function askAndReturnSearchTerm() {
-    return raedline.question("Type a Wikipedia search term: ");
+    return readline.question("Type a Wikipedia search term: ");
   }
 
   function askAndReturnPrefix() {
     const prefixes = ["Who is", "What is", "The history of"];
-    const selectedPrefixIndex = raedline.keyInSelect(
+    const selectedPrefixIndex = readline.keyInSelect(
       prefixes,
       "Choose one option: "
     );
