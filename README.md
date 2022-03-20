@@ -1,2 +1,2 @@
 # video-maker
-Projeto open source para fazer vídeos automatizados
+Open source project to make automated videos (based on [Felipe Deschamps](https://www.youtube.com/playlist?list=PLMdYygf53DP4YTVeu0JxVnWq01uXrLwHi) tutorial).
